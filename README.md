@@ -28,9 +28,7 @@
 Автотест:
 
 const puppeteer = require('puppeteer');
-
 const URL_TEST = 'https://qa-routes.praktikum-services.ru/';
-
 async function testTaxiResult() {
     console.log('Запуск браузера');
     const browser = await puppeteer.launch({headless: false, slowMo: 100});
@@ -76,13 +74,12 @@ async function testTaxiResult() {
     } else {
           console.log(`Ошибка. Текст не начинается со слова 'Такси'`)
     }
-
     console.log('Закрытие браузера');
     await browser.close();
 }
-
 testTaxiResult();
-Наверх
+
+
 
 Задание 2
 Автоматизируй тест-кейс для ya.ru, применив нужные селекторы.
@@ -107,7 +104,6 @@ testTaxiResult();
 Автотест:
 
 const puppeteer = require('puppeteer');
-
 async function testYaRu() {
     console.log('Запуск браузера');
     const browser = await puppeteer.launch();
@@ -138,9 +134,7 @@ async function testYaRu() {
     } else {
         console.log('Результаты поиска отобразились');
     }
-    
     console.log('Закрытие браузера');
     await browser.close();
 }
-
 testYaRu();
